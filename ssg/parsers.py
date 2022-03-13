@@ -1,3 +1,4 @@
+import shutil
 from typing import List
 from pathlib import path
 
@@ -14,7 +15,10 @@ class Parser:
         with open(path, "r") as file:
             return file.read()
 
-    def write(path, dest, content, ext=".html"):
+    def write(self, path, dest, content, ext=".html"):
         full_path= dest / path.with_sufix(ext).name
         with open(full_path, "w") as file:
             file.write(content)
+
+    def copy(self, path, source, dest):
+        shutil.copy2(path, dest / path.relative_to(source)) 
