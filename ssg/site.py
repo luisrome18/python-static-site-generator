@@ -26,6 +26,6 @@ class Site:
     ##create a for loop that iterates through the paths of self.source.rglob("*"). Call the current iteration path.
     def build(self):
         self.dest.mkdir(parents=True, exist_ok=True)
-            for path in self.source.rglob("*"):
-                if path.is_dir():
-                    self.create_dir(path)
+        for path in self.source.rglob("*"):
+            if path.is_dir():
+                self.create_dir(path)
