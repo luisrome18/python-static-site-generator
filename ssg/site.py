@@ -4,7 +4,7 @@ from pathlib import Path
 ##create a class called Site
 class Site:
     ##create a Site class constructor that accepts three arguments self, source, and dest
-    def _init_(self, source, dest);
+    def __init__(self, source, dest);
         ##convert source to a Path object.
         self.source = Path(source)
         ##Repeat these steps for dest
