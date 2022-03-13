@@ -2,7 +2,7 @@
 from pathlib import Path
 
 ##create a class called Site
-Class Site:
+class Site:
     ##create a Site class constructor that accepts three arguments self, source, and dest
     def _init_(self, source, dest);
         ##convert source to a Path object.
