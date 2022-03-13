@@ -22,11 +22,10 @@ class Site:
 
     ##Make the destination directory
     ##Create a new method called build() in the Site class
-    def build(self):
-        ##Call the mkdir() method on self.dest
+    ##Recreate all paths
+    ##create a for loop that iterates through the paths of self.source.rglob("*"). Call the current iteration path.
+    def build(self): ##Call the mkdir() method on self.dest
         self.dest.mkdir(parents=True, exist_ok=True)##pass the following keyword arguments to mkdir(): "parents set to True" "exist_ok set to True"
-        ##Recreate all paths
-        ##create a for loop that iterates through the paths of self.source.rglob("*"). Call the current iteration path.
         for path in self.source.rglob("*"):
             if path.is_dir(): ##test if the current path is a directory.
                 self.create_dir(path) ##If it is a directory, call the create_dir() method of the class, and pass in the current path
