@@ -5,4 +5,5 @@ def main(source="content", dest="dest"):
     config = {"source": source, "dest": dest}
     Site(**config).build()
 
+
 typer.run(main)
