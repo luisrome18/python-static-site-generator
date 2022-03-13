@@ -4,11 +4,14 @@ from pathlib import Path
 ##create a class called Site
 class Site:
     ##create a Site class constructor that accepts three arguments self, source, and dest
-    def __init__(self, source, dest):
+    ###parameter to the constructor parameter list called parsers. Set the default value to of parsers to None
+    def __init__(self, source, dest, parsers=None):
         ##convert source to a Path object.
         self.source = Path(source)
         ##Repeat these steps for dest
         self.dest = Path(dest)
+        ##instance variable called parsers to the expression parsers or []
+        self.parsers = parsers or []
 
     ##Find root directory
     ##create a method called create_dir() that accepts two parameters, self and path
