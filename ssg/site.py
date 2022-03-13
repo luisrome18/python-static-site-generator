@@ -12,7 +12,7 @@ class Site:
 
     ##Find root directory
     ##create a method called create_dir() that accepts two parameters, self and path
-    def create_dir(self, path):
+    def createadir(self, path):
         ##create a variable called directory
         ###variable will need to contain the full path to the destination folder
         directory = self.dest / path.relative_to(self.source) ## first part of the path is self.dest. The second part of the path needs to be relative to self.sourc
