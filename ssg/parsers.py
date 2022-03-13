@@ -1,10 +1,11 @@
 from typing import List
 from pathlib import path
 
-class Parser
-    def extensions List[str]
+class Parser:
+    extensions: List[str]=[]
 
-    def valid_extension(extension)
+    def valid_extension(self, extension):
+        return extension in self.extensions
 
-    def parse(path, source, dest)
-        
+    def parse(self, path: Path, source: Path, dest: Path)
+        raise NotImplementedError
