@@ -18,7 +18,7 @@ class Site:
         directory = self.dest / path.relative_to(self.source) ## first part of the path is self.dest. The second part of the path needs to be relative to self.sourc
         ##Make a directory
         ##call the mkdir() method on directory ##we want directory to be replaced if it exists.
-        direcroty = mkdir(parents=True, exist_ok=True)
+        direcroty.mkdir(parents=True, exist_ok=True)
 
     ##Make the destination directory
     ##Create a new method called build() in the Site class
